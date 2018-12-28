@@ -4,15 +4,15 @@ public class AnagramExample {
 
 	public static void main(String[] args) {
 
-		isAnagram2("Mother In Law", "Hitler Woman");
-		isAnagram2("keEp", "peeK");
-		isAnagram2("SiLeNt CAT", "LisTen AcT");
-		isAnagram2("Debit Card", "Bad Credit");
-		isAnagram2("School MASTER", "The ClassROOM");
-		isAnagram2("DORMITORY", "Dirty Room");
-		isAnagram2("ASTRONOMERS", "NO MORE STARS");
-		isAnagram2("Toss", "Shot");
-		isAnagram2("joy", "enjoy");
+		isAnagram1("Mother In Law", "Hitler Woman");
+		isAnagram1("keEp", "peeK");
+		isAnagram1("SiLeNt CAT", "LisTen AcT");
+		isAnagram1("Debit Card", "Bad Credit");
+		isAnagram1("School MASTER", "The ClassROOM");
+		isAnagram1("DORMITORY", "Dirty Room");
+		isAnagram1("ASTRONOMERS", "NO MORE STARS");
+		isAnagram1("Toss", "Shot");
+		isAnagram1("joy", "enjoy");
 	}
 
 	static void isAnagram1(String s1, String s2){
@@ -26,7 +26,7 @@ public class AnagramExample {
 			for(char ch : arrayOfs1){
 				int index = cos2.indexOf(ch);
 				if(index!=-1){
-					cos2=cos2.substring(0, index)+cos2.substring(index+1, cos2.length());
+					cos2=cos2.substring(0, index)+cos2.substring(index+1);
 				}else{
 					status = false;
 					break;

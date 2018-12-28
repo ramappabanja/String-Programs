@@ -8,9 +8,9 @@ public class OccurencesOfEachCharacter {
 
 	public static void main(String[] args) {
 
-		String str = "Ramappa";
+		String str = "I am Ramappa";
 		Map<Character, Long> mapOfChars = str.chars()
-				.mapToObj(ch->(char)ch)
+				.mapToObj(ch->(char)ch).filter(ch->ch!=' ')
 				.collect(Collectors.groupingBy(Function.identity(),LinkedHashMap::new,Collectors.counting()));
 		System.out.println("mapOfChars is : "+mapOfChars);
 	}
